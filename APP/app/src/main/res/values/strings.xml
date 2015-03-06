@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">航频之声</string>
+    <string name="title_activity_welcome">WelcomeActivity</string>
+    <string name="drawer_open">Open navigation drawer</string>
+    <string name="drawer_close">Close navigation drawer</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="title_activity_content">ContentActivity</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_guide">GuideActivity</string>
+    <string name="title_activity_about">AboutActivity</string>
+
+</resources>

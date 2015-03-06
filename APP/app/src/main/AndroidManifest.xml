@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.hpuvoice.app" >
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".WelcomeActivity"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.Holo.NoActionBar.Fullscreen" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.hpuvoice.activitys.ContentActivity"
+            android:theme="@android:style/Theme.Holo.Light"
+            android:label="@string/title_activity_content" >
+        </activity>
+        <activity
+            android:name="com.hpuvoice.activitys.GuideActivity"
+            android:label="@string/title_activity_guide"
+            android:theme="@android:style/Theme.Holo.NoActionBar.Fullscreen" >
+        </activity>
+        <activity
+            android:name="com.hpuvoice.activitys.AboutActivity"
+            android:label="@string/title_activity_about" >
+        </activity>
+    </application>
+
+</manifest>
