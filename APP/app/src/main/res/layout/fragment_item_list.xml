@@ -1,12 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
-    android:layout_height="match_parent" tools:context="com.hpuvoice.fragments.ShowFragment">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.hpuvoice.fragments.ShowFragment">
 
-    <ListView android:id="@android:id/list" android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"></LinearLayout>
 
-    <TextView android:id="@android:id/empty" android:layout_width="match_parent"
-        android:layout_height="match_parent" android:gravity="center" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#ff71dfae"
+        android:orientation="horizontal">
 
-</FrameLayout>
+        <com.hpuvoice.views.CircleImageView
+            android:layout_width="90dp"
+            android:layout_height="60dp"
+            android:src="@drawable/robot_logo" />
+
+        <Spinner
+            android:id="@+id/choose_tlking_object"
+            android:layout_width="100dp"
+            android:layout_marginLeft="200dp"
+            android:spinnerMode="dropdown"
+            android:layout_height="60dp"
+            android:paddingRight="10dp"
+            android:background="#ff37dfa0"
+            android:layout_alignParentRight="true"></Spinner>
+
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/messageListview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:cacheColorHint="#00000000"
+        android:divider="@null"
+        android:dividerHeight="3dp"
+        android:scrollbarStyle="outsideOverlay" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#7fd8d8d8" />
+
+    <com.hpuvoice.ui.chat.MessageInputToolBox
+        android:id="@+id/messageInputToolBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+</LinearLayout>

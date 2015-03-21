@@ -3,7 +3,7 @@
     android:id="@+id/content_drawer"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#ff0f0f0f"
+    android:background="#ff89e1bb"
     tools:context=".ContentActivity" >
 
     <FrameLayout
@@ -12,7 +12,7 @@
 
         <android.support.v4.view.ViewPager
             android:id="@+id/content_pager"
-            android:layout_below="@+id/tabs"
+            android:layout_marginTop="7dp"
             android:layout_width="match_parent"
             android:layout_height="match_parent" >
         </android.support.v4.view.ViewPager>

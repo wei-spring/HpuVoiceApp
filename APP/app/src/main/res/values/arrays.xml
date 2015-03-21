@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="object_talking">
+        <item>聊天</item>
+        <item>笑话</item>
+        <item>图片</item>
+        <item>天气</item>
+        <item>翻译</item>
+        <item>问答</item>
+        <item>百科</item>
+        <item>故事</item>
+    </string-array>
+</resources>

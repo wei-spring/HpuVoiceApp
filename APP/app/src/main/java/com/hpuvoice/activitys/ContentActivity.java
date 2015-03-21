@@ -99,7 +99,7 @@ public class ContentActivity extends FragmentActivity implements ViewPager.OnPag
 
     private class mPagerAdapter extends FragmentStatePagerAdapter {
 
-        private String Title[] = {"  今日头条    ", "   知乎  ", "   CSDN   ","   HPU   "};
+        private String Title[] = {"  图灵世界    ", "   知乎  ", "   CSDN   ","   HPU   "};
 
         public mPagerAdapter(FragmentManager fm) {
             super(fm);

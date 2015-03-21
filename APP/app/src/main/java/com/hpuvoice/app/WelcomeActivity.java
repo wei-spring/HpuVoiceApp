@@ -48,11 +48,9 @@ public class WelcomeActivity extends Activity {
         SharedPreferences preferences = getSharedPreferences("HP_Save", MODE_PRIVATE);
         isFirst = preferences.getBoolean("isFirst", true);
         if(isFirst) {
-            mHandler.sendEmptyMessageDelayed(GO_GUIDE, 150);
-
+            mHandler.sendEmptyMessageDelayed(GO_GUIDE, 0);
         } else {
-
-            mHandler.sendEmptyMessageDelayed(GO_HOME, 150);
+            mHandler.sendEmptyMessageDelayed(GO_HOME, 0);
         }
     }
 
