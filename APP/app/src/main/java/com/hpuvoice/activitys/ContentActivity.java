@@ -19,8 +19,8 @@ import android.view.Window;
 import android.widget.TextView;
 import com.hpuvoice.animation.ZoomOutPageTransformer;
 import com.hpuvoice.app.R;
+import com.hpuvoice.fragments.ChatFragment;
 import com.hpuvoice.fragments.MenuDrawer;
-import com.hpuvoice.fragments.ShowFragment;
 import com.hpuvoice.views.PagerSlidingTabStrip;
 
 public class ContentActivity extends FragmentActivity implements ViewPager.OnPageChangeListener {
@@ -99,7 +99,7 @@ public class ContentActivity extends FragmentActivity implements ViewPager.OnPag
 
     private class mPagerAdapter extends FragmentStatePagerAdapter {
 
-        private String Title[] = {"  图灵世界    ", "   知乎  ", "   CSDN   ","   HPU   "};
+        private String Title[] = {"  图灵世界    ", "   知乎  ", "   CSDN   ", "   HPU   "};
 
         public mPagerAdapter(FragmentManager fm) {
             super(fm);
@@ -107,7 +107,7 @@ public class ContentActivity extends FragmentActivity implements ViewPager.OnPag
 
         @Override
         public Fragment getItem(int arg0) {
-            return new ShowFragment();
+            return new ChatFragment();
         }
 
         @Override

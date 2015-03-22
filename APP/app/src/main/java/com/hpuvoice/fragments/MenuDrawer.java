@@ -14,9 +14,11 @@ import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.EditText;
 import android.widget.ListView;
-import com.hpuvoice.activitys.AboutActivity;
+
+import com.hpuvoice.activitys.ChatActivity;
 import com.hpuvoice.adapters.DrawerAdapter;
 import com.hpuvoice.app.R;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -38,7 +40,7 @@ public class MenuDrawer extends Fragment {
     ListView listView = (ListView)rootView.findViewById(R.id.meun_drawer_lv);
 
     mList = new ArrayList<String>();
-      mList.add("");
+      mList.add("~~图灵之家~~");
       mList.add("~~发 现~~");
       mList.add("~~公开课~~");
       mList.add("~~学霸区~~");
@@ -55,7 +57,7 @@ public class MenuDrawer extends Fragment {
               initDialog(getActivity());
           }
           if(arg2 == 1) {
-              Intent intent = new Intent(getActivity(), AboutActivity.class);
+              Intent intent = new Intent(getActivity(), ChatActivity.class);
               getActivity().startActivity(intent);
               getActivity().overridePendingTransition(android.R.anim.slide_in_left, android.R.anim.slide_out_right);
           }
