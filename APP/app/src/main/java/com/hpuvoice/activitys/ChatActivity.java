@@ -48,6 +48,8 @@ import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import sun.rmi.runtime.Log;
+
 /**
  * */
 public class ChatActivity extends Activity implements OnClickListener, DropdownListView.OnRefreshListenerHeader {
@@ -73,9 +75,9 @@ public class ChatActivity extends Activity implements OnClickListener, DropdownL
 
     @SuppressLint("SimpleDateFormat")
     private void initViews() {
-        choose_tlking_object = (Spinner)findViewById(R.id.choose_tlking_object);
+        choose_tlking_object = (Spinner) findViewById(R.id.choose_tlking_object);
         final String[] objectItems = getResources().getStringArray(R.array.object_talking);
-        ArrayAdapter<String> spinnerAdapter=new ArrayAdapter<String>(this,android.R.layout.simple_spinner_item, objectItems);
+        ArrayAdapter<String> spinnerAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, objectItems);
         choose_tlking_object.setAdapter(spinnerAdapter);
         choose_tlking_object.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
@@ -153,6 +155,7 @@ public class ChatActivity extends Activity implements OnClickListener, DropdownL
                     new Handler().postDelayed(new Runnable() {
                         @Override
                         public void run() {
+                            //TODO: 添加图灵机器人的回复的地方.....
                             infos.add(getChatInfoFrom(reply));
                             mLvAdapter.setList(infos);
                             mLvAdapter.notifyDataSetChanged();
@@ -435,6 +438,34 @@ public class ChatActivity extends Activity implements OnClickListener, DropdownL
             if (getCurrentFocus() != null)
                 manager.hideSoftInputFromWindow(getCurrentFocus().getWindowToken(), InputMethodManager.HIDE_NOT_ALWAYS);
         }
+    }
+
+    /**
+     * 查询图灵机器人官网，获取
+     *
+     * @param queryString
+     * @return
+     */
+    public String getTuLingHuiFu(String queryString) {
+        String APIKEY = "7e75b29ab972483d7d63418ddced2bf8";
+        String INFO = URLEncoder.encode("北京今日天气", "utf-8");
+        String getURL = "http://www.tuling123.com/openapi/api?key=" + APIKEY + "&info=" + INFO;
+        URL getUrl = new URL(getURL);
+        HttpURLConnection connection = (HttpURLConnection) getUrl.openConnection();
+        connection.connect();
+
+        // 取得输入流，并使用Reader读取
+        BufferedReader reader = new BufferedReader(new InputStreamReader(connection.getInputStream(), "utf-8"));
+        StringBuffer sb = new StringBuffer();
+        String line = "";
+        while ((line = reader.readLine()) != null) {
+            sb.append(line);
+        }
+        reader.close();
+        // 断开连接
+        connection.disconnect();
+        Log.e(sb, sb);
+        return null;
     }
 
 }
