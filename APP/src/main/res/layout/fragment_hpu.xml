@@ -1,0 +1,26 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.hpuvoice.fragment.HpuFragment">
+
+    <View
+        android:id="@+id/view_line"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"/>
+    <ImageView
+        android:id="@+id/iv_show_1"
+        android:layout_below="@id/view_line"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:src="@drawable/hpu_show_1"
+        android:scaleType="fitXY"
+        />
+
+    <WebView
+        android:id="@+id/wv_show_hpu"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/iv_show_1"
+        />
+</RelativeLayout>

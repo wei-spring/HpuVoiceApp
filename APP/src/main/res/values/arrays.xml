@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="object_talking">
+        <item>文字类</item>
+        <item>链接类</item>
+        <item>新闻</item>
+        <item>列车</item>
+        <item>航班</item>
+        <item>菜谱</item>
+    </string-array>
+</resources>

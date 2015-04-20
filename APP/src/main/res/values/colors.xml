@@ -1,0 +1,24 @@
+<resources>
+
+    <color name="black_overlay">#66000000</color>
+    <color name="background_tab_pressed">#6633B5E5</color>
+    <color name="white">#FFFFFF</color>
+    <color name="gray">#737373</color>
+    <color name="transparent">#00000000</color>
+    <color name="black">#FF000000</color>
+    <color name="nomalGray">#838B83</color>
+    <color name="coffee">#622f1b</color>
+
+    <color name="wangyibg">#f0f0f0</color>
+    <color name="wangyibg2">#E0E0E0</color>
+    <color name="younibg">#f6f6f6</color>
+    <color name="pathbg">#f1eee9</color>
+    <color name="pathbg2">#d0c3b7</color>
+
+    <color name="transparentdarkgray">#CC292929</color>
+    <color name="transparentgray">#CC666666</color>
+    <color name="transparent2">#55ffffff</color>
+    <color name="transparentblack">#88000000</color>
+    <color name="transparentblack2">#cc000000</color>
+    <color name="transparentblue">#445CACEE</color>
+</resources>

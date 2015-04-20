@@ -1,0 +1,33 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.hpuvoice.fragment.WallFragment">
+
+    <View
+        android:id="@+id/view_line_wall"
+        android:layout_width="match_parent"
+        android:layout_height="30dp" />
+
+    <EditText
+        android:id="@+id/et_show_wall"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:padding="10dp"
+        android:layout_below="@id/view_line_wall"
+        android:hint="请输入你的贱语" />
+
+    <Button
+        android:id="@+id/bt_commit_wall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/et_show_wall"
+        android:layout_centerHorizontal="true"
+        android:text="提交" />
+
+    <ListView
+        android:id="@+id/lv_show_wall"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/bt_commit_wall"></ListView>
+</RelativeLayout>
